@@ -14,6 +14,7 @@ class PostViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var dateField: UITextField!
     
     @IBAction func handlePostButton(_ sender: Any) {
         // 画像をJPEG形式に変換する
@@ -41,6 +42,7 @@ class PostViewController: UIViewController {
                       "name": name!,
                       "caption": self.textField.text!,
                       "date": FieldValue.serverTimestamp(),
+                      "postdate": self.dateField.text!,
                       ] as [String : Any]
                   postRef.setData(postDic)
                   // HUDで投稿完了を表示する

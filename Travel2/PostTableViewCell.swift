@@ -11,8 +11,8 @@ import FirebaseUI
 
 class PostTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var postImageView: UIImageView!
@@ -35,16 +35,18 @@ class PostTableViewCell: UITableViewCell {
 
             // キャプションの表示
             self.captionLabel.text = "\(postData.name!) : \(postData.caption!)"
-
+            // 日時の表示
+                       self.dateLabel.text = "\(postData.postdate!)"
+/*
             // 日時の表示
             self.dateLabel.text = ""
-            if let date = postData.date {
+           if let date = postData.date {
                 let formatter = DateFormatter()
                 formatter.dateFormat = "yyyy-MM-dd HH:mm"
                 let dateString = formatter.string(from: date)
                 self.dateLabel.text = dateString
             }
-
+*/
             // いいね数の表示
             let likeNumber = postData.likes.count
             likeLabel.text = "\(likeNumber)"
