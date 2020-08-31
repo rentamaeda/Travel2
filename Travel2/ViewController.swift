@@ -9,10 +9,17 @@
 import UIKit
 import Photos
 import DKImagePickerController  // 忘れないように
-class ViewController: UIViewController {
-    @IBOutlet weak var imageView: UIImageView!
+class ViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout  {
 
-    
+    var localImages: [UIImage] = []
+
+    @IBOutlet weak var CollectionView: UICollectionView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.CollectionView.delegate = self
+        self.CollectionView.dataSource = self
+
+    }
     @IBAction func button(_ sender: Any) {
         let pickerController = DKImagePickerController()
         // 選択可能な枚数を20にする
@@ -23,7 +30,11 @@ class ViewController: UIViewController {
             for asset in assets {
                 asset.fetchFullScreenImage(completeBlock: { (image, info) in
                     // ここで取り出せる
-                    self.imageView.image = image
+                    //assetsにライブラリの画像をいれる
+                                      if let image = image {
+                                       self.localImages.append(image)
+                                       self.CollectionView.reloadData()
+                                       }
                 })
                 
             }
@@ -33,11 +44,31 @@ class ViewController: UIViewController {
         
         self.present(pickerController, animated: true) {}
     }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return localImages.count  // ←修正する
+        
+        }
+                func numberOfSections(in collectionView: UICollectionView) -> Int {
+                      return 1
+                  }
+           
+                func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+                      //①
+                      let cell = self.CollectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
+                      //②
+                    // Cellに値を設定する.  --- ここから ---
+    //                let task = taskArray[indexPath.row]
+    //                cell.textLabel?.text = task.title
+
+                      //③
+                    cell.imageView.image = localImages[indexPath.row]
+
+                 
+                    //⑤
+                     return cell
+                               
+                  }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 
 
 }

@@ -65,11 +65,15 @@ class ImageSelectViewController: UIViewController, UIImagePickerControllerDelega
             }
              func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
                  // ImageSelectViewController画面を閉じてタブ画面に戻る
-                 self.presentingViewController?.dismiss(animated: true, completion: nil)
+                 //self.presentingViewController?.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true, completion: nil)
+
              }
             // CLImageEditorの編集がキャンセルされた時に呼ばれるメソッド
                func imageEditorDidCancel(_ editor: CLImageEditor!) {
                    // ImageSelectViewController画面を閉じてタブ画面に戻る
-                   self.presentingViewController?.dismiss(animated: true, completion: nil)
+                  // self.presentingViewController?.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true, completion: nil)
+
                }
         }

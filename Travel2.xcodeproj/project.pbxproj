@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE35BC5624FCD453006CEB34 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35BC5524FCD453006CEB34 /* CollectionViewCell.swift */; };
 		CE90156D24F9E50E00675BB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90156C24F9E50E00675BB0 /* AppDelegate.swift */; };
 		CE90156F24F9E50E00675BB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90156E24F9E50E00675BB0 /* SceneDelegate.swift */; };
 		CE90157124F9E50E00675BB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90157024F9E50E00675BB0 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		6D41B6A0416FB61016DECC8D /* Pods_Travel2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Travel2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		799E786BFFE061D296331ABB /* Pods-Travel2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel2.debug.xcconfig"; path = "Target Support Files/Pods-Travel2/Pods-Travel2.debug.xcconfig"; sourceTree = "<group>"; };
+		CE35BC5524FCD453006CEB34 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		CE90156924F9E50E00675BB0 /* Travel2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE90156C24F9E50E00675BB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE90156E24F9E50E00675BB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				CE90159E24FA4B3F00675BB0 /* PostTableViewCell.swift */,
 				CE90159F24FA4B3F00675BB0 /* PostTableViewCell.xib */,
 				CE90159024FA2A2D00675BB0 /* ImageSelectViewController.swift */,
+				CE35BC5524FCD453006CEB34 /* CollectionViewCell.swift */,
 				CE90157524F9E51000675BB0 /* Assets.xcassets */,
 				CE90157724F9E51000675BB0 /* LaunchScreen.storyboard */,
 				CE90157A24F9E51000675BB0 /* Info.plist */,
@@ -249,6 +252,7 @@
 				CE90157124F9E50E00675BB0 /* ViewController.swift in Sources */,
 				CE90156D24F9E50E00675BB0 /* AppDelegate.swift in Sources */,
 				CE90156F24F9E50E00675BB0 /* SceneDelegate.swift in Sources */,
+				CE35BC5624FCD453006CEB34 /* CollectionViewCell.swift in Sources */,
 				CE90158F24FA2A0500675BB0 /* SettingViewController.swift in Sources */,
 				CE90159D24FA4ACB00675BB0 /* PostData.swift in Sources */,
 				CE90159B24FA4A2C00675BB0 /* Const.swift in Sources */,
