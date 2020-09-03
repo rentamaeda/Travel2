@@ -8,19 +8,43 @@
 
 import UIKit
 import CLImageEditor
+import Photos
 
-class ImageSelectViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLImageEditorDelegate {
+import DKImagePickerController
+class ImageSelectViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLImageEditorDelegate ,DKImageAssetExporterObserver{
+     var localImages: [UIImage] = []
+
 
 
     @IBAction func handleLibraryButton(_ sender: Any) {
-        // ライブラリ（カメラロール）を指定してピッカーを開く
-              if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-                  let pickerController = UIImagePickerController()
-                  pickerController.delegate = self
-                  pickerController.sourceType = .photoLibrary
-                  self.present(pickerController, animated: true, completion: nil)
-              }
+                 let pickerController = DKImagePickerController()
+        // 選択可能な枚数を20にする
+        pickerController.maxSelectableCount = 20
+        pickerController.didSelectAssets = { [unowned self] (assets: [DKAsset]) in
+            
+            // 選択された画像はassetsに入れて返却されるのでfetchして取り出す
+            for asset in assets {
+                asset.fetchFullScreenImage(completeBlock: { (image:UIImage?, info) in
+                    // ここで取り出せる
+                    //self.imageView.image = image
+                    //assetsにライブラリの画像をいれる
+                   if let image = image {
+                    self.localImages.append(image)
+                   
+                    }
+                })
+            }
+            let postViewController = self.storyboard?.instantiateViewController(withIdentifier: "Post") as! PostViewController
+                       self.present(postViewController, animated: true, completion: nil)
+            }
+                   
+                   self.present(pickerController, animated: true) {}
     }
+    
+   
+    
+    
+
     @IBAction func handleCameraButton(_ sender: Any) {
         // カメラを指定してピッカーを開く
               if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -28,21 +52,23 @@ class ImageSelectViewController: UIViewController, UIImagePickerControllerDelega
                   pickerController.delegate = self
                   pickerController.sourceType = .camera
                   self.present(pickerController, animated: true, completion: nil)
+                
               }
     }
     
     @IBAction func handleCancelButton(_ sender: Any) {
         // 画面を閉じる
              self.dismiss(animated: true, completion: nil)
-        
+
     }
     override func viewDidLoad() {
             super.viewDidLoad()
 
             // Do any additional setup after loading the view.
         }
-
-        // 写真を撮影/選択したときに呼ばれるメソッド
+  
+            
+        // 写真を撮影選択したときに呼ばれるメソッド
        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
                  if info[.originalImage] != nil {
                      // 撮影/選択された画像を取得する

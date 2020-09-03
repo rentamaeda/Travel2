@@ -106,11 +106,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrS-V3-2gL">
-                                <rect key="frame" x="169" y="226" width="76" height="28"/>
+                                <rect key="frame" x="157" y="226" width="100" height="28"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="D2a-EE-Klf"/>
+                                    <constraint firstAttribute="width" constant="100" id="mZz-gn-Grq"/>
                                 </constraints>
-                                <state key="normal" title="ライブラリ"/>
+                                <state key="normal" title="ライブラリ">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
                                 <connections>
                                     <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V34-9R-dYn"/>
                                 </connections>
@@ -125,7 +129,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="hnd-Tm-d2S" customClass="CollectionViewCell" customModule="Travel2" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="hnd-Tm-d2S">
                                         <rect key="frame" x="98" y="0.0" width="218" height="235"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fep-35-BQK">
@@ -156,7 +160,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gvg-X7-7he" secondAttribute="trailing" id="BEb-Gh-x1Z"/>
                             <constraint firstItem="Gvg-X7-7he" firstAttribute="top" secondItem="YrS-V3-2gL" secondAttribute="bottom" constant="10" id="DWK-8g-MUb"/>
                             <constraint firstItem="YrS-V3-2gL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="182" id="OPc-t0-ioO"/>
-                            <constraint firstItem="YrS-V3-2gL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="169" id="dEi-Jt-qpz"/>
                             <constraint firstItem="Gvg-X7-7he" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hoR-Kp-ArG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Gvg-X7-7he" secondAttribute="bottom" id="lsc-X3-y6B"/>
                             <constraint firstItem="YrS-V3-2gL" firstAttribute="centerX" secondItem="Gvg-X7-7he" secondAttribute="centerX" id="yLk-X7-bN2"/>
@@ -276,14 +279,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98T-94-B67">
-                                <rect key="frame" x="10" y="64" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YzC-Wk-3Im">
-                                <rect key="frame" x="57" y="204" width="300" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YzC-Wk-3Im">
+                                <rect key="frame" x="57" y="430" width="300" height="30"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="dBs-OG-l6F"/>
+                                </constraints>
                                 <state key="normal" title="投稿する">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
@@ -291,10 +292,13 @@
                                     <action selector="handlePostButton:" destination="cpd-qd-LAC" eventType="touchUpInside" id="AAX-zt-HtI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSA-01-hrx">
-                                <rect key="frame" x="57" y="244" width="300" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSA-01-hrx">
+                                <rect key="frame" x="57" y="470" width="300" height="30"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="dYc-yM-Zkf"/>
+                                    <constraint firstAttribute="width" constant="300" id="pqW-Zq-XG3"/>
+                                </constraints>
                                 <state key="normal" title="キャンセル">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
@@ -302,32 +306,87 @@
                                     <action selector="handleCancelButton:" destination="cpd-qd-LAC" eventType="touchUpInside" id="MAU-fI-giR"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タイトル" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tm5-CP-Jie">
-                                <rect key="frame" x="140" y="150" width="264" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タイトル" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tm5-CP-Jie">
+                                <rect key="frame" x="57" y="363" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="jH0-bi-O6M"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="年/月/日" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S6C-wZ-JPH">
-                                <rect key="frame" x="140" y="84" width="264" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="年/月/日" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S6C-wZ-JPH">
+                                <rect key="frame" x="57" y="297" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="fDR-NL-An0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FXY-Xr-DoP">
+                                <rect key="frame" x="80" y="54" width="255" height="181"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hZm-GB-igg">
+                                    <size key="itemSize" width="174" height="159"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="esZ-kb-xmx" customClass="CollectionViewCell" customModule="Travel2" customModuleProvider="target">
+                                        <rect key="frame" x="40.5" y="0.0" width="174" height="159"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="imK-Lf-YRu">
+                                            <rect key="frame" x="0.0" y="0.0" width="174" height="159"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZT6-HN-uXu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="174" height="159"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZT6-HN-uXu" firstAttribute="leading" secondItem="imK-Lf-YRu" secondAttribute="leading" id="5Hd-v0-nLp"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZT6-HN-uXu" secondAttribute="bottom" id="8kB-gw-gZt"/>
+                                                <constraint firstItem="ZT6-HN-uXu" firstAttribute="top" secondItem="imK-Lf-YRu" secondAttribute="top" id="fot-AJ-nfW"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZT6-HN-uXu" secondAttribute="trailing" id="jPg-Cw-Lvd"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="174" height="159"/>
+                                        <connections>
+                                            <outlet property="imageHeight" destination="jPg-Cw-Lvd" id="bzO-kK-21W"/>
+                                            <outlet property="imageView" destination="ZT6-HN-uXu" id="zS0-A4-Qo7"/>
+                                            <outlet property="imageWidth" destination="8kB-gw-gZt" id="8Me-15-4f9"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tm5-CP-Jie" firstAttribute="centerX" secondItem="ZB1-BR-YE2" secondAttribute="centerX" id="6R7-AN-86g"/>
+                            <constraint firstItem="QSA-01-hrx" firstAttribute="centerX" secondItem="ZB1-BR-YE2" secondAttribute="centerX" id="8i7-m8-tmn"/>
+                            <constraint firstItem="S6C-wZ-JPH" firstAttribute="top" secondItem="FXY-Xr-DoP" secondAttribute="bottom" constant="10" id="EiA-Pe-AeO"/>
+                            <constraint firstItem="YzC-Wk-3Im" firstAttribute="top" secondItem="tm5-CP-Jie" secondAttribute="bottom" constant="33" id="FD0-eh-EbW"/>
+                            <constraint firstItem="EsT-5M-ppn" firstAttribute="bottom" secondItem="QSA-01-hrx" secondAttribute="bottom" constant="362" id="FDZ-th-5dq"/>
+                            <constraint firstItem="FXY-Xr-DoP" firstAttribute="leading" secondItem="EsT-5M-ppn" secondAttribute="leading" constant="10" id="FKy-84-6PK"/>
+                            <constraint firstItem="EsT-5M-ppn" firstAttribute="trailing" secondItem="FXY-Xr-DoP" secondAttribute="trailing" constant="10" id="IAS-1X-8Ny"/>
+                            <constraint firstItem="tm5-CP-Jie" firstAttribute="top" secondItem="S6C-wZ-JPH" secondAttribute="bottom" constant="32" id="Lpw-mF-pgg"/>
+                            <constraint firstItem="S6C-wZ-JPH" firstAttribute="centerX" secondItem="ZB1-BR-YE2" secondAttribute="centerX" id="U7R-gW-Yu2"/>
+                            <constraint firstItem="FXY-Xr-DoP" firstAttribute="top" secondItem="EsT-5M-ppn" secondAttribute="top" id="kF9-EE-Hw6"/>
+                            <constraint firstItem="QSA-01-hrx" firstAttribute="top" secondItem="YzC-Wk-3Im" secondAttribute="bottom" constant="10" id="mZG-3r-vYk"/>
+                            <constraint firstItem="YzC-Wk-3Im" firstAttribute="centerX" secondItem="ZB1-BR-YE2" secondAttribute="centerX" id="rGa-1U-DTi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EsT-5M-ppn"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Image" image="camera.fill" catalog="system" id="MQ6-ZM-dUV"/>
                     <connections>
+                        <outlet property="CollectionView" destination="FXY-Xr-DoP" id="AiT-nJ-IVM"/>
                         <outlet property="dateField" destination="S6C-wZ-JPH" id="vNK-kD-gvP"/>
-                        <outlet property="imageView" destination="98T-94-B67" id="M4b-Bq-ZjQ"/>
                         <outlet property="textField" destination="tm5-CP-Jie" id="IKZ-nI-ZM3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tq4-78-01f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1599" y="876"/>
+            <point key="canvasLocation" x="-1600.0000000000002" y="875.89285714285711"/>
         </scene>
         <!--Setting-->
         <scene sceneID="SRz-lG-fbT">

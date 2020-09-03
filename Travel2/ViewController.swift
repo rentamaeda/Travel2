@@ -61,7 +61,7 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
     //                cell.textLabel?.text = task.title
 
                       //③
-                    cell.imageView.image = localImages[indexPath.row]
+                  //  cell.imageView.image = localImages[indexPath.row]
 
                  
                     //⑤

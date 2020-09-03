@@ -12,7 +12,7 @@ import SVProgressHUD
 class PostViewController: UIViewController {
     var image: UIImage!
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var CollectionView: UICollectionView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var dateField: UITextField!
     
@@ -59,7 +59,7 @@ class PostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 受け取った画像をImageViewに設定する
-              imageView.image = image
+            //  imageView.image = image
         // Do any additional setup after loading the view.
     }
     
