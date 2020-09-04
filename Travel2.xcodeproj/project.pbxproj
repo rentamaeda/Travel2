@@ -25,6 +25,7 @@
 		CE90159D24FA4ACB00675BB0 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90159C24FA4ACB00675BB0 /* PostData.swift */; };
 		CE9015A024FA4B3F00675BB0 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90159E24FA4B3F00675BB0 /* PostTableViewCell.swift */; };
 		CE9015A124FA4B3F00675BB0 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE90159F24FA4B3F00675BB0 /* PostTableViewCell.xib */; };
+		CEA4D2E7250239730093CB27 /* TestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4D2E6250239730093CB27 /* TestCollectionViewCell.swift */; };
 		E3629B0509E2159A91166BE5 /* Pods_Travel2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D41B6A0416FB61016DECC8D /* Pods_Travel2.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		CE90159C24FA4ACB00675BB0 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		CE90159E24FA4B3F00675BB0 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		CE90159F24FA4B3F00675BB0 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		CEA4D2E6250239730093CB27 /* TestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewCell.swift; sourceTree = "<group>"; };
 		EC09134C77BF162CC062CC77 /* Pods-Travel2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel2.release.xcconfig"; path = "Target Support Files/Pods-Travel2/Pods-Travel2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 			children = (
 				CE90156C24F9E50E00675BB0 /* AppDelegate.swift */,
 				CE90156E24F9E50E00675BB0 /* SceneDelegate.swift */,
+				CEA4D2E6250239730093CB27 /* TestCollectionViewCell.swift */,
 				CE90157024F9E50E00675BB0 /* ViewController.swift */,
 				CE90157224F9E50E00675BB0 /* Main.storyboard */,
 				CE90158C24FA29F700675BB0 /* HomeViewController.swift */,
@@ -254,6 +257,7 @@
 				CE90156F24F9E50E00675BB0 /* SceneDelegate.swift in Sources */,
 				CE35BC5624FCD453006CEB34 /* CollectionViewCell.swift in Sources */,
 				CE90158F24FA2A0500675BB0 /* SettingViewController.swift in Sources */,
+				CEA4D2E7250239730093CB27 /* TestCollectionViewCell.swift in Sources */,
 				CE90159D24FA4ACB00675BB0 /* PostData.swift in Sources */,
 				CE90159B24FA4A2C00675BB0 /* Const.swift in Sources */,
 				CE9015A024FA4B3F00675BB0 /* PostTableViewCell.swift in Sources */,
@@ -404,6 +408,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 745PYH75K2;
 				INFOPLIST_FILE = Travel2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -423,6 +428,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 745PYH75K2;
 				INFOPLIST_FILE = Travel2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

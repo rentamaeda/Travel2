@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
- platform :ios, '13.6'
+ platform :ios, '13.7'
 install! 'cocoapods', :deterministic_uuids => false
 
 target 'Travel2' do

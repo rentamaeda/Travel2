@@ -8,7 +8,6 @@
 
 import UIKit
 import FirebaseUI
-
 class PostTableViewCell: UITableViewCell {
 
     @IBOutlet weak var dateLabel: UILabel!

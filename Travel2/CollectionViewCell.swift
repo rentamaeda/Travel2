@@ -10,8 +10,10 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     
+    
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet weak var imageWidth: NSLayoutConstraint!
+  
+    @IBOutlet weak var imgeWidth: NSLayoutConstraint!
     @IBOutlet weak var imageHeight: NSLayoutConstraint!
 }

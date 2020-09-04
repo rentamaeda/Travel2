@@ -14,6 +14,8 @@ import DKImagePickerController
 class ImageSelectViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLImageEditorDelegate ,DKImageAssetExporterObserver{
      var localImages: [UIImage] = []
 
+    //カートにつなぐ変数
+    var selectedImage :  [UIImage] = []
 
 
     @IBAction func handleLibraryButton(_ sender: Any) {
@@ -30,13 +32,23 @@ class ImageSelectViewController: UIViewController, UIImagePickerControllerDelega
                     //assetsにライブラリの画像をいれる
                    if let image = image {
                     self.localImages.append(image)
-                   
+                    self.selectedImage =  self.localImages
+                    let subVC = self.storyboard?.instantiateViewController(withIdentifier: "Post") as! PostViewController
+                    
+                                                                 // SubViewController のselectedImgに選択された画像を設定する
+                                                                                   //  subVC.selectedImg = self.selectedImage
+                   let postViewController = self.storyboard?.instantiateViewController(withIdentifier: "Post") as! PostViewController
+                      postViewController.assets = assets
+                                                          self.present(postViewController, animated: true, completion: nil)
+                  
+                                             
                     }
+                  
+
                 })
             }
-            let postViewController = self.storyboard?.instantiateViewController(withIdentifier: "Post") as! PostViewController
-                       self.present(postViewController, animated: true, completion: nil)
-            }
+          
+        }
                    
                    self.present(pickerController, animated: true) {}
     }
@@ -86,7 +98,7 @@ class ImageSelectViewController: UIViewController, UIImagePickerControllerDelega
             func imageEditor(_ editor: CLImageEditor!, didFinishEditingWith image: UIImage!) {
                 // 投稿画面を開く
                 let postViewController = self.storyboard?.instantiateViewController(withIdentifier: "Post") as! PostViewController
-                postViewController.image = image!
+              //  postViewController.image = image!
                 editor.present(postViewController, animated: true, completion: nil)
             }
              func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
