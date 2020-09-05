@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CE35BC5624FCD453006CEB34 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35BC5524FCD453006CEB34 /* CollectionViewCell.swift */; };
+		CE3B5B502503B27F00B03CF0 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B5B4E2503B27F00B03CF0 /* CustomCell.swift */; };
+		CE3B5B512503B27F00B03CF0 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3B5B4F2503B27F00B03CF0 /* CustomCell.xib */; };
 		CE90156D24F9E50E00675BB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90156C24F9E50E00675BB0 /* AppDelegate.swift */; };
 		CE90156F24F9E50E00675BB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90156E24F9E50E00675BB0 /* SceneDelegate.swift */; };
 		CE90157124F9E50E00675BB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90157024F9E50E00675BB0 /* ViewController.swift */; };
@@ -33,6 +35,8 @@
 		6D41B6A0416FB61016DECC8D /* Pods_Travel2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Travel2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		799E786BFFE061D296331ABB /* Pods-Travel2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel2.debug.xcconfig"; path = "Target Support Files/Pods-Travel2/Pods-Travel2.debug.xcconfig"; sourceTree = "<group>"; };
 		CE35BC5524FCD453006CEB34 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		CE3B5B4E2503B27F00B03CF0 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		CE3B5B4F2503B27F00B03CF0 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		CE90156924F9E50E00675BB0 /* Travel2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE90156C24F9E50E00675BB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE90156E24F9E50E00675BB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				CE90159224FA2A3500675BB0 /* PostViewController.swift */,
 				CE90159C24FA4ACB00675BB0 /* PostData.swift */,
 				CE90159A24FA4A2C00675BB0 /* Const.swift */,
+				CE3B5B4E2503B27F00B03CF0 /* CustomCell.swift */,
+				CE3B5B4F2503B27F00B03CF0 /* CustomCell.xib */,
 				CE90159E24FA4B3F00675BB0 /* PostTableViewCell.swift */,
 				CE90159F24FA4B3F00675BB0 /* PostTableViewCell.xib */,
 				CE90159024FA2A2D00675BB0 /* ImageSelectViewController.swift */,
@@ -190,6 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3B5B512503B27F00B03CF0 /* CustomCell.xib in Resources */,
 				CE90157924F9E51000675BB0 /* LaunchScreen.storyboard in Resources */,
 				CE9015A124FA4B3F00675BB0 /* PostTableViewCell.xib in Resources */,
 				CE90157624F9E51000675BB0 /* Assets.xcassets in Resources */,
@@ -254,6 +261,7 @@
 				CE90159724FA337F00675BB0 /* TabBarController.swift in Sources */,
 				CE90157124F9E50E00675BB0 /* ViewController.swift in Sources */,
 				CE90156D24F9E50E00675BB0 /* AppDelegate.swift in Sources */,
+				CE3B5B502503B27F00B03CF0 /* CustomCell.swift in Sources */,
 				CE90156F24F9E50E00675BB0 /* SceneDelegate.swift in Sources */,
 				CE35BC5624FCD453006CEB34 /* CollectionViewCell.swift in Sources */,
 				CE90158F24FA2A0500675BB0 /* SettingViewController.swift in Sources */,
