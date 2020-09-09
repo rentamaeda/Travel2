@@ -9,7 +9,8 @@
 import UIKit
 import Firebase
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
+class HomeViewController:UIViewController, UITableViewDataSource, UITableViewDelegate ,UICollectionViewDataSource{
+
     @IBOutlet weak var tableView: UITableView!
     // 投稿データを格納する配列
       var postArray: [PostData] = []
@@ -70,6 +71,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
            // セルを取得してデータを設定する
            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PostTableViewCell
            cell.setPostData(postArray[indexPath.row])
+        cell.Custom.reloadData()
 
            return cell
        }
@@ -102,3 +104,70 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
               }
           }
 }
+//extensionでcollectionViewについて
+extension HomeViewController:    UICollectionViewDelegateFlowLayout{
+    
+   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 240, height: 180)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCell
+        return cell
+        
+    }
+}
+
+//extension ViewController: UITableViewDataSource, UITableViewDelegate
+//  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//      return 3
+//  }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: 240, height: 180)
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+//
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCell
+//        return cell
+//
+//    }
+//}
+//  //extensionでcollectionViewについて
+//extension ViewController:  UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
+//
+//        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//            return 3
+//        }
+//
+//        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//            return CGSize(width: 240, height: 180)
+//        }
+//
+//        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+//
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCell
+//
+//            switch (collectionView.tag) {
+//            case 0:
+//                cell.imageView.image = UIImage(named: dogs[indexPath.row]["imageName"]!)
+//                cell.textLabel.text = dogs[indexPath.row]["name"]
+//
+//            case 1:
+//                cell.imageView.image = UIImage(named: dogs2[indexPath.row]["imageName"]!)
+//                cell.textLabel.text = dogs2[indexPath.row]["name"]
+//
+//            case 2:
+//                cell.imageView.image = UIImage(named: dogs3[indexPath.row]["imageName"]!)
+//                cell.textLabel.text = dogs3[indexPath.row]["name"]
+//
+//            default:
+//                print("section error")
+//            }
+//            return cell
+//        }
+//    }

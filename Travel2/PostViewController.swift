@@ -99,10 +99,8 @@ SVProgressHUD.show()
         })
          //セルのサイズ
                  let cellWidthSize = UIScreen.main.bounds.width / 3
-                 
                  cell.imageWidth.constant = cellWidthSize
                  cell.imageHeight.constant = cellWidthSize
-                 
                  cell.imageView.contentMode = .scaleToFill
                  
                  return cell

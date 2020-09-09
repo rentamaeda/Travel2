@@ -12,7 +12,6 @@
 		CE3B5B512503B27F00B03CF0 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3B5B4F2503B27F00B03CF0 /* CustomCell.xib */; };
 		CE90156D24F9E50E00675BB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90156C24F9E50E00675BB0 /* AppDelegate.swift */; };
 		CE90156F24F9E50E00675BB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90156E24F9E50E00675BB0 /* SceneDelegate.swift */; };
-		CE90157124F9E50E00675BB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90157024F9E50E00675BB0 /* ViewController.swift */; };
 		CE90157424F9E50E00675BB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE90157224F9E50E00675BB0 /* Main.storyboard */; };
 		CE90157624F9E51000675BB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE90157524F9E51000675BB0 /* Assets.xcassets */; };
 		CE90157924F9E51000675BB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE90157724F9E51000675BB0 /* LaunchScreen.storyboard */; };
@@ -27,7 +26,6 @@
 		CE90159D24FA4ACB00675BB0 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90159C24FA4ACB00675BB0 /* PostData.swift */; };
 		CE9015A024FA4B3F00675BB0 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90159E24FA4B3F00675BB0 /* PostTableViewCell.swift */; };
 		CE9015A124FA4B3F00675BB0 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE90159F24FA4B3F00675BB0 /* PostTableViewCell.xib */; };
-		CEA4D2E7250239730093CB27 /* TestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4D2E6250239730093CB27 /* TestCollectionViewCell.swift */; };
 		E3629B0509E2159A91166BE5 /* Pods_Travel2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D41B6A0416FB61016DECC8D /* Pods_Travel2.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +38,6 @@
 		CE90156924F9E50E00675BB0 /* Travel2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE90156C24F9E50E00675BB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE90156E24F9E50E00675BB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE90157024F9E50E00675BB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE90157324F9E50E00675BB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE90157524F9E51000675BB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE90157824F9E51000675BB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,7 +53,6 @@
 		CE90159C24FA4ACB00675BB0 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		CE90159E24FA4B3F00675BB0 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		CE90159F24FA4B3F00675BB0 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
-		CEA4D2E6250239730093CB27 /* TestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewCell.swift; sourceTree = "<group>"; };
 		EC09134C77BF162CC062CC77 /* Pods-Travel2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel2.release.xcconfig"; path = "Target Support Files/Pods-Travel2/Pods-Travel2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,8 +99,6 @@
 			children = (
 				CE90156C24F9E50E00675BB0 /* AppDelegate.swift */,
 				CE90156E24F9E50E00675BB0 /* SceneDelegate.swift */,
-				CEA4D2E6250239730093CB27 /* TestCollectionViewCell.swift */,
-				CE90157024F9E50E00675BB0 /* ViewController.swift */,
 				CE90157224F9E50E00675BB0 /* Main.storyboard */,
 				CE90158C24FA29F700675BB0 /* HomeViewController.swift */,
 				CE90158E24FA2A0500675BB0 /* SettingViewController.swift */,
@@ -259,13 +253,11 @@
 				CE90159124FA2A2D00675BB0 /* ImageSelectViewController.swift in Sources */,
 				CE90158D24FA29F700675BB0 /* HomeViewController.swift in Sources */,
 				CE90159724FA337F00675BB0 /* TabBarController.swift in Sources */,
-				CE90157124F9E50E00675BB0 /* ViewController.swift in Sources */,
 				CE90156D24F9E50E00675BB0 /* AppDelegate.swift in Sources */,
 				CE3B5B502503B27F00B03CF0 /* CustomCell.swift in Sources */,
 				CE90156F24F9E50E00675BB0 /* SceneDelegate.swift in Sources */,
 				CE35BC5624FCD453006CEB34 /* CollectionViewCell.swift in Sources */,
 				CE90158F24FA2A0500675BB0 /* SettingViewController.swift in Sources */,
-				CEA4D2E7250239730093CB27 /* TestCollectionViewCell.swift in Sources */,
 				CE90159D24FA4ACB00675BB0 /* PostData.swift in Sources */,
 				CE90159B24FA4A2C00675BB0 /* Const.swift in Sources */,
 				CE9015A024FA4B3F00675BB0 /* PostTableViewCell.swift in Sources */,

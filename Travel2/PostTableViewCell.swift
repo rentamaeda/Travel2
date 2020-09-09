@@ -10,6 +10,7 @@ import UIKit
 import FirebaseUI
 class PostTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var Custom: UICollectionView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var likeLabel: UILabel!
@@ -17,7 +18,9 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var postImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        // カスタムセルの登録
+              let nib = UINib(nibName: "CustomCell", bundle: nil)
+              Custom.register(nib, forCellWithReuseIdentifier: "Cell")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,13 +28,19 @@ class PostTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    func setCollectionViewDataSourceDelegate
+           <D: UICollectionViewDataSource & UICollectionViewDelegate>
+           (dataSourceDelegate: D, forRow row: Int) {
+           
+           Custom.delegate = dataSourceDelegate
+           Custom.dataSource = dataSourceDelegate
+           Custom.tag = row
+           Custom.reloadData()
+           
+       }
      // PostDataの内容をセルに表示
         func setPostData(_ postData: PostData) {
-            // 画像の表示
-            postImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
-            let imageRef = Storage.storage().reference().child(Const.ImagePath).child(postData.id + ".jpg")
-            postImageView.sd_setImage(with: imageRef)
-
+        
             // キャプションの表示
             self.captionLabel.text = "\(postData.name!) : \(postData.caption!)"
             // 日時の表示
@@ -59,4 +68,6 @@ class PostTableViewCell: UITableViewCell {
                 self.likeButton.setImage(buttonImage, for: .normal)
             }
         }
+   
+
     }
